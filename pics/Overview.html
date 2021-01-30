@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>微信公众平台开发概述 | 微信开放文档</title>
+    <meta name="description" content="微信开发者平台文档">
+    <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" type="image/x-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+  <link rel="mask-icon" color="#4C4C4C" href="https://res.wx.qq.com/a/wx_fed/assets/res/MjliNWVm.svg">
+  <link rel="apple-touch-icon-precomposed" href="https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png">
+    
+    <link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/css/0.styles.a18b5856.css" as="style"><link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/js/app.5ef0b322.js" as="script"><link rel="preload" href="https://res.wx.qq.com/wxdoc/dist/assets/js/522.f69b787b.js" as="script">
+    <link rel="stylesheet" href="https://res.wx.qq.com/wxdoc/dist/assets/css/0.styles.a18b5856.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><div class="theme-container"><header class="navbar navbar_with-link"><div class="navbar__left"><a href="/doc/" class="home-link router-link-active"><div class="logo__wrp"><span class="logo__icon"></span></div></a> <span class="dot"></span> <div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">公众号</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/miniprogram/dev/framework/" class="nav-link external">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/minigame/dev/guide/" class="nav-link external">
+  小游戏
+</a></li><li class="dropdown-item"><!----> <a href="/doc/ministore/minishopquickstart/introduction.html" class="nav-link external">
+  小商店
+</a></li><li class="dropdown-item selected"><!----> <a href="/doc/offiaccount/Getting_Started/Overview.html" class="nav-link external">
+  公众号
+</a></li><li class="dropdown-item"><!----> <a href="/doc/aispeech/platform/INTRODUCTION.html" class="nav-link external">
+  智能对话
+</a></li><li class="dropdown-item"><!----> <a href="/doc/oplatform/Mobile_App/Resource_Center_Homepage.html" class="nav-link external">
+  开放平台
+</a></li><li class="dropdown-item"><!----> <a href="https://work.weixin.qq.com/api/doc" class="nav-link external">
+  企业微信
+</a></li><li class="dropdown-item"><!----> <a href="https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pages/index.shtml" class="nav-link external">
+  微信支付
+</a></li><li class="dropdown-item"><!----> <a href="/doc/xwei/xiaowei-introduction/Introduction.html" class="nav-link external">
+  腾讯小微
+</a></li></ul></div></div> <div class="navbar__center"><!----></div> <div class="navbar__right"><ul class="lang-tab"><li class="lang-tab__item selected">中文</li> <li class="lang-tab__item">EN</li></ul> <div class="search__wrp"><div class="search__input"><div class="weui-desktop-search"><span class="weui-desktop-form__input-wrp"><span class="weui-desktop-form__input-append-in"><button class="weui-desktop-icon-btn weui-desktop-search__btn"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M11.33 10.007l4.273 4.273a.502.502 0 0 1 .005.709l-.585.584a.499.499 0 0 1-.709-.004L10.046 11.3a6.278 6.278 0 1 1 1.284-1.294zm.012-3.729a5.063 5.063 0 1 0-10.127 0 5.063 5.063 0 0 0 10.127 0z"></path></svg></button></span> <input placeholder="搜索内容" type="search" value="" class="weui-desktop-form__input"></span></div> <a href="javascript:;" class="search-back__btn">取消</a></div> <div class="reco-list__wrp" style="display:none;"><ul class="reco__list"></ul> <div class="show-more"><a href="/doc/search?source=more&amp;query=&amp;doc_type=offiaccount&amp;jumpbackUrl=%2Fdoc%2F" class="reco-item__link">查看更多 </a></div></div> <div class="reco-list__wrp" style="display:none;"><div class="show-more"><a href="/doc/search?source=more&amp;query=&amp;doc_type=offiaccount&amp;jumpbackUrl=%2Fdoc%2F" class="reco-item__link">在公众号下暂无结果，查看其它业务相关内容 &gt; </a></div></div></div></div></header> <!----> <div class="mobile-links__wrp"><div class="mobile-links_mobile"><a href="javascript:;" class="mobile-links__btn">中文</a></div> <div class="mobile-links__panel"><div class="links-panel__bd"><!----></div> <div class="links-panel__ft"><ul class="lang-tab"><li class="lang-tab__item selected">中文</li> <li class="lang-tab__item">EN</li></ul></div></div> <div><div class="weui-mask" style="display:none;"></div> <div class="weui-actionsheet "><!----> <div class="weui-actionsheet__menu"><div class="weui-actionsheet__cell">中文</div><div class="weui-actionsheet__cell">EN</div></div> <div class="weui-actionsheet__action"><div class="weui-actionsheet__cell">取消</div></div></div></div></div> <a href="javascript:;" class="mobile-search-btn"></a> <div class="main-container" style="margin-top:0;"><div class="main-contontaier__bd" style="min-height:0px;"><div class="sidebar__wrp"><div class="sidebar-cell_mobile"><li class="subnavbar__item selected"><a href="javascript:;" target="_self">公众号开发指南</a></li></div> <aside class="sidebar" style="top:144px;"> <div class="TreeNavigation"><div class="NavigationLevel NavigationLevel--level-0"><ul><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Overview.html" class="NavigationItem__router-link router-link-exact-active router-link-active">
+      开发前必读
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Overview.html" class="NavigationItem__router-link router-link-exact-active router-link-active">
+      首页
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Update_log.html" class="NavigationItem__router-link">
+      更新日志
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Developer_Standards.html" class="NavigationItem__router-link">
+      开发者规范
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Explanation_of_interface_privileges.html" class="NavigationItem__router-link">
+      接口权限说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Global_Return_Code.html" class="NavigationItem__router-link">
+      全局返回码说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Getting_Started/Getting_Started_Guide.html" class="NavigationItem__router-link">
+      入门指引
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Access_Overview.html" class="NavigationItem__router-link">
+      开始开发
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Access_Overview.html" class="NavigationItem__router-link">
+      接入指南
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Interface_field_description.html" class="NavigationItem__router-link">
+      接口域名说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Get_access_token.html" class="NavigationItem__router-link">
+      获取Access token
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Requesting_an_API_Test_Account.html" class="NavigationItem__router-link">
+      接口测试号申请
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Warning_Message_Troubleshooting_Guide.html" class="NavigationItem__router-link">
+      报警排查指引
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Online_API_calls.html" class="NavigationItem__router-link">
+      接口在线调试
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Get_the_WeChat_server_IP_address.html" class="NavigationItem__router-link">
+      获取微信服务器IP地址
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Network_Detection.html" class="NavigationItem__router-link">
+      网络检测
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Basic_Information/Frequently_Asked_Questions.html" class="NavigationItem__router-link">
+      常见问题
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Creating_Custom-Defined_Menu.html" class="NavigationItem__router-link">
+      自定义菜单
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Creating_Custom-Defined_Menu.html" class="NavigationItem__router-link">
+      创建接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Querying_Custom_Menus.html" class="NavigationItem__router-link">
+      查询接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Deleting_Custom-Defined_Menu.html" class="NavigationItem__router-link">
+      删除接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Custom_Menu_Push_Events.html" class="NavigationItem__router-link">
+      事件推送
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Personalized_menu_interface.html" class="NavigationItem__router-link">
+      个性化菜单接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Custom_Menus/Getting_Custom_Menu_Configurations.html" class="NavigationItem__router-link">
+      获取自定义菜单配置
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Receiving_standard_messages.html" class="NavigationItem__router-link">
+      基础消息能力
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Receiving_standard_messages.html" class="NavigationItem__router-link">
+      接收普通消息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Receiving_event_pushes.html" class="NavigationItem__router-link">
+      接收事件推送
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Passive_user_reply_message.html" class="NavigationItem__router-link">
+      被动回复用户消息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Template_Message_Interface.html" class="NavigationItem__router-link">
+      模板消息接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/One-time_subscription_info.html" class="NavigationItem__router-link">
+      公众号一次性订阅消息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Template_Message_Operation_Specifications.html" class="NavigationItem__router-link">
+      模板消息运营规范
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Message_encryption_and_decryption_instructions.html" class="NavigationItem__router-link">
+      消息加解密说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Batch_Sends_and_Originality_Checks.html" class="NavigationItem__router-link">
+      群发接口和原创校验
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/API_Call_Limits.html" class="NavigationItem__router-link">
+      接口调用频次限制说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Getting_Rules_for_Auto_Replies.html" class="NavigationItem__router-link">
+      获取公众号的自动回复规则
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Subscription_Messages/intro.html" class="NavigationItem__router-link">
+      订阅通知
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Subscription_Messages/intro.html" class="NavigationItem__router-link">
+      订阅通知介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Subscription_Messages/api.html" class="NavigationItem__router-link">
+      订阅通知接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Subscription_Messages/category.html" class="NavigationItem__router-link">
+      行业类目
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Forwarding_of_messages_to_service_center.html" class="NavigationItem__router-link">
+      客服消息
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Message_Management/Service_Center_messages.html" class="NavigationItem__router-link">
+      客服消息
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Forwarding_of_messages_to_service_center.html" class="NavigationItem__router-link">
+      PC 客服能力
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Forwarding_of_messages_to_service_center.html" class="NavigationItem__router-link">
+      将消息转发到客服
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Customer_Service_Management.html" class="NavigationItem__router-link">
+      客服管理
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Session_control.html" class="NavigationItem__router-link">
+      会话控制
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Customer_Service/Obtain_chat_transcript.html" class="NavigationItem__router-link">
+      获取聊天记录
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide.html" class="NavigationItem__router-link">
+      对话能力
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide.html#产品介绍" class="NavigationItem__router-link">
+      产品介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/Edition.html" class="NavigationItem__router-link">
+      版本更新日志
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide.html#开通指引" class="NavigationItem__router-link">
+      开通指引
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide.html#能力详解" class="NavigationItem__router-link">
+      能力详解
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideAcct.html" class="NavigationItem__router-link">
+      顾问管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.addGuideAcct.html" class="NavigationItem__router-link">
+      添加顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideAcct.html" class="NavigationItem__router-link">
+      获取顾问信息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.updateGuideAcct.html" class="NavigationItem__router-link">
+      修改顾问信息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.delGuideAcct.html" class="NavigationItem__router-link">
+      删除顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideAcctList.html" class="NavigationItem__router-link">
+      获取服务号顾问列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.guideCreateQrCode.html" class="NavigationItem__router-link">
+      生成顾问二维码
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.onGuideCreateQrCode.html" class="NavigationItem__router-link">
+      扫顾问二维码后的事件推送
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideBuyerChatRecord.html" class="NavigationItem__router-link">
+      获取顾问聊天记录
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.setGuideConfig.html" class="NavigationItem__router-link">
+      设置快捷回复与关注自动回复
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideConfig.html" class="NavigationItem__router-link">
+      获取快捷回复与关注自动回复
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.setGuideAcctConfig.html" class="NavigationItem__router-link">
+      设置离线自动回复与敏感词
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideAcctConfig.html" class="NavigationItem__router-link">
+      获取离线自动回复与敏感词
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.pushShowWxaPathMenu.html" class="NavigationItem__router-link">
+      允许微信用户复制小程序页面路径
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.newGuideGroup.html" class="NavigationItem__router-link">
+      新建顾问分组
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGuideGroupList.html" class="NavigationItem__router-link">
+      获取顾问分组列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGroupInfo.html" class="NavigationItem__router-link">
+      获取顾问分组信息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.addGuide2GuideGroup.html" class="NavigationItem__router-link">
+      分组内添加顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.delGuide2GuideGroup.html" class="NavigationItem__router-link">
+      分组内删除顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.getGroupByGuide.html" class="NavigationItem__router-link">
+      获取顾问所在分组
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/guide-account/shopping-guide.delGuideGroup.html" class="NavigationItem__router-link">
+      删除顾问分组
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.getGuideBuyerRelationList.html" class="NavigationItem__router-link">
+      客户管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.addGuideBuyerRelation.html" class="NavigationItem__router-link">
+      为顾问分配客户
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.delGuideBuyerRelation.html" class="NavigationItem__router-link">
+      为顾问移除客户
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.getGuideBuyerRelationList.html" class="NavigationItem__router-link">
+      获取顾问的客户列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.rebindGuideAcctForBuyer.html" class="NavigationItem__router-link">
+      为客户更换顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.updateGuideBuyerRelation.html" class="NavigationItem__router-link">
+      修改客户昵称
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.getGuideBuyerRelationByBuyer.html" class="NavigationItem__router-link">
+      查询客户所属顾问
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/buyer-account/shopping-guide.getGuideBuyerRelation.html" class="NavigationItem__router-link">
+      查询指定顾问和客户的关系
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.newGuideTagOption.html" class="NavigationItem__router-link">
+      标签管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.newGuideTagOption.html" class="NavigationItem__router-link">
+      新建标签类型 
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.delguidetagoption.html" class="NavigationItem__router-link">
+      删除标签类型 
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.addGuideTagOption.html" class="NavigationItem__router-link">
+      为标签添加可选值
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.getGuideTagOption.html" class="NavigationItem__router-link">
+      获取标签和可选值
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.addGuideBuyerTag.html" class="NavigationItem__router-link">
+      为客户设置标签
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.getGuideBuyerTag.html" class="NavigationItem__router-link">
+      查询客户标签
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.queryGuideBuyerByTag.html" class="NavigationItem__router-link">
+      根据标签值筛选客户
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.delGuideBuyerTag.html" class="NavigationItem__router-link">
+      删除客户标签
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.addGuideBuyerDisplayTag.html" class="NavigationItem__router-link">
+      设置自定义客户信息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/tag-account/shopping-guide.getGuideBuyerDisplayTag.html" class="NavigationItem__router-link">
+      获取自定义客户信息
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.setGuideCardMaterial.html" class="NavigationItem__router-link">
+      素材管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.setGuideCardMaterial.html" class="NavigationItem__router-link">
+      添加小程序卡片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.getGuideCardMaterial.html" class="NavigationItem__router-link">
+      查询小程序卡片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.delGuideCardMaterial.html" class="NavigationItem__router-link">
+      删除小程序卡片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.setGuideImageMaterial.html" class="NavigationItem__router-link">
+      添加图片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.getGuideImageMaterial.html" class="NavigationItem__router-link">
+      查询图片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.delGuideImageMaterial.html" class="NavigationItem__router-link">
+      删除图片素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.setGuideWordMaterial.html" class="NavigationItem__router-link">
+      添加文字素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.getGuideWordMaterial.html" class="NavigationItem__router-link">
+      查询文字素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/model-account/shopping-guide.delGuideWordMaterial.html" class="NavigationItem__router-link">
+      删除文字素材
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-3"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.addGuideMassendJob.html" class="NavigationItem__router-link">
+      群发任务管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.addGuideMassendJob.html" class="NavigationItem__router-link">
+      添加群发任务
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.getGuideMassendJobList.html" class="NavigationItem__router-link">
+      获取群发任务列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.getGuideMassendJob.html" class="NavigationItem__router-link">
+      获取指定群发任务信息
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.updateGuideMassendJob.html" class="NavigationItem__router-link">
+      修改群发任务
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Shopping_Guide/task-account/shopping-guide.cancelGuideMassendJob.html" class="NavigationItem__router-link">
+      取消群发任务
+    <!----></a> <!----> <!----></span></li></ul></div></li></ul></div></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/iOS_WKWebview.html" class="NavigationItem__router-link">
+      微信网页开发
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/iOS_WKWebview.html" class="NavigationItem__router-link">
+      iOS WKWebview网页开发适配指南
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html" class="NavigationItem__router-link">
+      网页授权
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/web_development_style_library.html" class="NavigationItem__router-link">
+      网页开发样式库
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/JS-SDK.html" class="NavigationItem__router-link">
+      JS-SDK说明文档
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html" class="NavigationItem__router-link">
+      开放标签说明文档
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/Web_Developer_Tools.html" class="NavigationItem__router-link">
+      web开发者工具
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/DarkMode.html" class="NavigationItem__router-link">
+      DarkMode 适配指南
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/OA_Web_Apps/CloudBase.html" class="NavigationItem__router-link">
+      云开发
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/New_temporary_materials.html" class="NavigationItem__router-link">
+      素材管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/New_temporary_materials.html" class="NavigationItem__router-link">
+      新增临时素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Get_temporary_materials.html" class="NavigationItem__router-link">
+      获取临时素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Adding_Permanent_Assets.html" class="NavigationItem__router-link">
+      新增永久素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Getting_Permanent_Assets.html" class="NavigationItem__router-link">
+      获取永久素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Deleting_Permanent_Assets.html" class="NavigationItem__router-link">
+      删除永久素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Editing_Permanent_Rich_Media_Assets.html" class="NavigationItem__router-link">
+      修改永久图文素材
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Get_the_total_of_all_materials.html" class="NavigationItem__router-link">
+      获取素材总数
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Asset_Management/Get_materials_list.html" class="NavigationItem__router-link">
+      获取素材列表
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Comments_management/Image_Comments_Management_Interface.html" class="NavigationItem__router-link">
+      图文消息留言管理
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/User_Tag_Management.html" class="NavigationItem__router-link">
+      用户管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/User_Tag_Management.html" class="NavigationItem__router-link">
+      用户标签管理
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/Configuring_user_notes.html" class="NavigationItem__router-link">
+      设置用户备注名
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/Get_users_basic_information_UnionID.html#UinonId" class="NavigationItem__router-link">
+      获取用户基本信息(UnionID机制)
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/Getting_a_User_List.html" class="NavigationItem__router-link">
+      获取用户列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/Gets_a_users_location.html" class="NavigationItem__router-link">
+      获取用户地理位置
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/User_Management/Manage_blacklist.html" class="NavigationItem__router-link">
+      黑名单管理
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Account_Management/Generating_a_Parametric_QR_Code.html" class="NavigationItem__router-link">
+      帐号管理
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Account_Management/Generating_a_Parametric_QR_Code.html" class="NavigationItem__router-link">
+      生成带参数的二维码
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Account_Management/URL_Shortener.html" class="NavigationItem__router-link">
+      长链接转短链接接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Account_Management/KEY_Shortener.html" class="NavigationItem__router-link">
+      短key托管
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Account_Management/Wechat_Accreditation_Event_Push.html" class="NavigationItem__router-link">
+      微信认证事件推送
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/User_Analysis_Data_Interface.html" class="NavigationItem__router-link">
+      数据统计
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/User_Analysis_Data_Interface.html" class="NavigationItem__router-link">
+      用户分析
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Graphic_Analysis_Data_Interface.html" class="NavigationItem__router-link">
+      图文分析
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Message_analysis_data_interface.html" class="NavigationItem__router-link">
+      消息分析
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Ad_Analysis.html" class="NavigationItem__router-link">
+      广告分析
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Ad_Analysis.html#一、获取公众号分广告位数据（publisher-adpos-general）" class="NavigationItem__router-link">
+      分广告位数据
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Ad_Analysis.html#二、获取公众号返佣商品数据（publisher-cps-general）" class="NavigationItem__router-link">
+      返佣商品数据
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Ad_Analysis.html#三、获取公众号结算收入数据及结算主体信息（publisher-settlement）" class="NavigationItem__router-link">
+      结算收入数据
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Analytics/Analytics_API.html" class="NavigationItem__router-link">
+      接口分析
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/WeChat_Coupon_Interface.html" class="NavigationItem__router-link">
+      微信卡券
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/WeChat_Coupon_Interface.html" class="NavigationItem__router-link">
+      微信卡券接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Update_log.html" class="NavigationItem__router-link">
+      更新日志
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Create_a_Coupon_Voucher_or_Card.html" class="NavigationItem__router-link">
+      创建卡券
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Distributing_Coupons_Vouchers_and_Cards.html" class="NavigationItem__router-link">
+      投放卡券
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Redeeming_a_coupon_voucher_or_card.html" class="NavigationItem__router-link">
+      核销卡券
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Managing_Coupons_Vouchers_and_Cards.html" class="NavigationItem__router-link">
+      管理卡券
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Coupons_Vouchers_and_Cards_Event_Push_Messages.html" class="NavigationItem__router-link">
+      卡券事件推送
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Coupons-Mini_Program_Start_Up.html" class="NavigationItem__router-link">
+      卡券-小程序打通
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/gift_card.html" class="NavigationItem__router-link">
+      微信礼品卡
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Membership_Cards/introduction.html" class="NavigationItem__router-link">
+      会员卡专区
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Membership_Cards/introduction.html" class="NavigationItem__router-link">
+      玩法介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Membership_Cards/Create_a_membership_card.html" class="NavigationItem__router-link">
+      创建会员卡
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Membership_Cards/Manage_Member_Card.html" class="NavigationItem__router-link">
+      管理会员卡
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Special_ticket.html" class="NavigationItem__router-link">
+      特殊票券
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Card_coupons_error_code.html" class="NavigationItem__router-link">
+      卡券错误码
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Cards_and_Offer/Third-party_developer_mode.html" class="NavigationItem__router-link">
+      第三方开发者模式
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Stores/WeChat_Store_Interface.html" class="NavigationItem__router-link">
+      微信门店
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Stores/WeChat_Store_Interface.html" class="NavigationItem__router-link">
+      微信门店接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Stores/WeChat_Shop_Miniprogram_Interface.html" class="NavigationItem__router-link">
+      微信门店小程序接口
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Instant_Stores/WeChat_Store_Interface.html" class="NavigationItem__router-link">
+      微信小店
+    <!----></a> <!----> <!----></span></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Intelligent_Interface/Natural_Language_Processing.html" class="NavigationItem__router-link">
+      智能接口
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Intelligent_Interface/Natural_Language_Processing.html" class="NavigationItem__router-link">
+      语义理解
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Intelligent_Interface/AI_Open_API.html" class="NavigationItem__router-link">
+      AI开放接口
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Intelligent_Interface/OCR.html" class="NavigationItem__router-link">
+      OCR识别
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Intelligent_Interface/Img_Proc.html" class="NavigationItem__router-link">
+      图像处理
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Connecting_devices/Introduction_to_Features.html" class="NavigationItem__router-link">
+      微信设备功能
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Connecting_devices/Introduction_to_Features.html" class="NavigationItem__router-link">
+      设备功能介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Connecting_devices/How_to_add_new_product_type.html" class="NavigationItem__router-link">
+      如何新增产品型号
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Unique_Item_Code/Unique_Item_Code_Op_Guide.html" class="NavigationItem__router-link">
+      微信“一物一码”
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Unique_Item_Code/Unique_Item_Code_Op_Guide.html" class="NavigationItem__router-link">
+      微信“一物一码”操作指引
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Unique_Item_Code/Unique_Item_Code_API_Documentation.html" class="NavigationItem__router-link">
+      一物一码接口文档
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Unique_Item_Code/Unique_Item_Code_Asked_Questions.html" class="NavigationItem__router-link">
+      一物一码常见问题
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Instruction.html" class="NavigationItem__router-link">
+      微信发票
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Instruction.html" class="NavigationItem__router-link">
+      微信电子发票
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Instruction.html" class="NavigationItem__router-link">
+      业务介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Choosing_Access_Mode.html" class="NavigationItem__router-link">
+      选择接入模式
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Vendor_and_Invoicing_Platform_Mode_Instruction.html" class="NavigationItem__router-link">
+      “商户+开票平台”模式说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Self_Built_Platform_Mode_Instruction.html" class="NavigationItem__router-link">
+      “自建平台”模式说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Reimbursing_Instruction.html" class="NavigationItem__router-link">
+      报销场景说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Vendor_API_List.html" class="NavigationItem__router-link">
+      商户接口列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Invoicing_Platform_API_List.html" class="NavigationItem__router-link">
+      开票平台接口列表
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/E_Invoice/Reimburser_API_List.html" class="NavigationItem__router-link">
+      报销方接口列表
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Introduction.html" class="NavigationItem__router-link">
+      极速开发票
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Introduction.html" class="NavigationItem__router-link">
+      方案介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Access_Request.html" class="NavigationItem__router-link">
+      接入申请
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Role_and_Process_Illustrations.html" class="NavigationItem__router-link">
+      角色及流程图
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Interface_Instructions.html" class="NavigationItem__router-link">
+      接口说明
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Quick_issuing/Large-sized_QR_code_designs.html" class="NavigationItem__router-link">
+      二维码立牌设计
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Auto-print/Business_Introduction.html" class="NavigationItem__router-link">
+      电子发票自助打印
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Auto-print/Business_Introduction.html" class="NavigationItem__router-link">
+      业务介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Auto-print/API_Documentation.html" class="NavigationItem__router-link">
+      接口文档
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Auto-print/Design_Materials.html" class="NavigationItem__router-link">
+      设计素材
+    <!----></a> <!----> <!----></span></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-2"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Nontax_Bill/Introduction.html" class="NavigationItem__router-link">
+      非税票据
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Nontax_Bill/Introduction.html" class="NavigationItem__router-link">
+      业务介绍
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Nontax_Bill/Access.html" class="NavigationItem__router-link">
+      接入财政电子票据
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/WeChat_Invoice/Nontax_Bill/API_list.html" class="NavigationItem__router-link">
+      接口列表
+    <!----></a> <!----> <!----></span></li></ul></div></li></ul></div></li><li><div class="NavigationLevel NavigationLevel--closed NavigationLevel--level-1"><div class="NavigationLevel__parent"><span class="NavigationToggle NavigationToggle--closed"><span class="NavigationToggle__icon NavigationToggle__icon--closed"></span></span> <span class="NavigationItem"><!----> <a href="/doc/offiaccount/Non_tax_pay/Guidelines.html" class="NavigationItem__router-link">
+      微信非税缴费
+    <!----></a> <!----> <!----></span></div> <ul class="NavigationLevel__children"><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Non_tax_pay/Guidelines.html" class="NavigationItem__router-link">
+      接入指引
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Non_tax_pay/API_document.html" class="NavigationItem__router-link">
+      接口文档
+    <!----></a> <!----> <!----></span></li><li><span class="NavigationItem"><!----> <a href="/doc/offiaccount/Non_tax_pay/Non-tax_driver_platform.html" class="NavigationItem__router-link">
+      微信非税车主平台接入文档
+    <!----></a> <!----> <!----></span></li></ul></div></li></ul></div></div> </aside></div> <div class="page__wrp"><main class="page"><div class="page-inner" style="min-height:0px;"> <div id="docContent"><div class="content custom"><h1 id="微信公众平台开发概述"><a href="#微信公众平台开发概述" aria-hidden="true" class="header-anchor">#</a> 微信公众平台开发概述</h1> <p>微信公众平台是运营者通过公众号为微信用户提供资讯和服务的平台，而公众平台开发接口则是提供服务的基础，开发者在公众平台网站中创建公众号、获取接口权限后，可以通过阅读本接口文档来帮助开发。如遇问题，可前往 <a href="https://developers.weixin.qq.com/community/minihome/question/1277775808983138305?mockCommonUse=1" target="_blank" rel="noopener noreferrer">#公众号社区<span></span></a> 发帖交流。</p> <p>为了识别用户，每个用户针对每个公众号会产生一个安全的OpenID，如果需要在多公众号、移动应用之间做用户共通，则需前往微信开放平台，将这些公众号和应用绑定到一个开放平台账号下，绑定后，一个用户虽然对多个公众号和应用有多个不同的OpenID，但他对所有这些同一开放平台账号下的公众号和应用，只有一个UnionID，可以在用户管理-获取用户基本信息（UnionID机制）文档了解详情。</p> <p>请开发者注意：</p> <p>1、微信公众平台开发是指为微信公众号进行业务开发，为移动应用、PC端网站、公众号第三方平台（为各行各业公众号运营者提供服务）的开发，请前往微信开放平台接入。</p> <p>2、在申请到认证公众号之前，你可以先通过测试号申请系统，快速申请一个接口测试号，立即开始接口测试开发。</p> <p>3、在开发过程中，可以使用接口调试工具来在线调试某些接口。</p> <p>4、每个接口都有每日接口调用频次限制，可以在公众平台官网-开发者中心处查看具体频次。</p> <p>5、在开发出现问题时，可以通过接口调用的返回码，以及报警排查指引（在公众平台官网-开发者中心处可以设置接口报警），来发现和解决问题。</p> <p>6、公众平台以access_token为接口调用凭据，来调用接口，所有接口的调用需要先获取access_token，access_token在2小时内有效，过期需要重新获取，但1天内获取次数有限，开发者需自行存储，详见获取接口调用凭据（access_token）文档。</p> <p>7、公众平台接口调用仅支持80端口。</p> <p>公众号主要通过公众号消息会话和公众号内网页来为用户提供服务的，下面分别介绍这两种情况：</p> <p><strong>1、公众号消息会话</strong></p> <p>公众号是以微信用户的一个联系人形式存在的，消息会话是公众号与用户交互的基础。目前公众号内主要有这样几类消息服务的类型，分别用于不同的场景。</p> <p>1）群发消息：公众号可以以一定频次（订阅号为每天1次，服务号为每月4次），向用户群发消息，包括文字消息、图文消息、图片、视频、语音等。</p> <p>2）被动回复消息：在用户给公众号发消息后，微信服务器会将消息发到开发者预先在开发者中心设置的服务器地址（开发者需要进行消息真实性验证），公众号可以在5秒内做出回复，可以回复一个消息，也可以回复命令告诉微信服务器这条消息暂不回复。被动回复消息可以设置加密（在公众平台官网的开发者中心处设置，设置后，按照消息加解密文档来进行处理。其他3种消息的调用因为是API调用而不是对请求的返回，所以不需要加解密）。</p> <p>3）客服消息：在用户给公众号发消息后的48小时内，公众号可以给用户发送不限数量的消息，主要用于客服场景。用户的行为会触发事件推送，某些事件推送是支持公众号据此发送客服消息的，详见微信推送消息与事件说明文档。</p> <p>4）模板消息：在需要对用户发送服务通知（如刷卡提醒、服务预约成功通知等）时，公众号可以用特定内容模板，主动向用户发送消息。</p> <p><strong>2、公众号内网页</strong></p> <p>许多复杂的业务场景，需要通过网页形式来提供服务，这时需要用到：</p> <p>1）网页授权获取用户基本信息：通过该接口，可以获取用户的基本信息（获取用户的OpenID是无需用户同意的，获取用户的基本信息则需用户同意）</p> <p>2）微信JS-SDK：是开发者在网页上通过JavaScript代码使用微信原生功能的工具包，开发者可以使用它在网页上录制和播放微信语音、监听微信分享、上传手机本地图片、拍照等许多能力。</p> <h2 id="典型案例介绍"><a href="#典型案例介绍" aria-hidden="true" class="header-anchor">#</a> 典型案例介绍</h2> <p>值得借鉴的公众帐号主要是服务号，试列举并介绍如下：</p> <p><strong>招商银行信用卡中心</strong></p> <img src="https://mmbiz.qpic.cn/mmbiz/PiajxSqBRaEIQxibpLbyuSK8jCzLMb60WcYoLMD3nrCodIwbPeds9WFXYcEQapJ88EE4vfAwufMZWH1ZdC49HiaSg/0?wx_fmt=png" alt data-width="600" data-ratio="0.7783333333333333"> <p>如果你是持卡人，可快捷查询信用卡账单、额度及积分；快速还款、申请账单分期；微信转接人工服务；信用卡消费，微信免费笔笔提醒。如果不是持卡人，可以微信办卡！</p> <p>招商银行公众号通过提示消息引导用户将自己的微信号和信用卡号安全绑定。 用户可以通过该公众号查询账单、收取刷卡通知等功能，这是由招行开发人员通过公众号接口实现的功能。</p> <p><strong>中国南方航空</strong></p> <img src="https://mmbiz.qpic.cn/mmbiz/PiajxSqBRaEIQxibpLbyuSK8jCzLMb60Wc7GW6zia0ibibqSd00ooJibG1Wz8pYTiaVwmibwX6hdJSkTMmKr3FefB54ZKA/0?wx_fmt=png" alt data-width="600" data-ratio="0.775"> <p>你可以办理值机手续，挑选座位，查询航班信息，查询目的地城市天气，并为明珠会员提供专业的服务。</p> <p>南方航空公众号可以让用户将明珠会员服务和微信号绑定起来。 用户可以通过该公众号预订机票、查询订单，甚至办理登机牌。</p> <p><strong>广东联通</strong></p> <img src="https://mmbiz.qpic.cn/mmbiz/PiajxSqBRaEIQxibpLbyuSK8jCzLMb60WcdMzTOtlSMSpoSy13TiaBwL2t1icfDya9dicDgfTrLHrsXtGmeoa6m8Y2A/0?wx_fmt=jpeg" alt data-width="600" data-ratio="0.7733333333333333"> <p>你可以在微信里绑定手机号、积分流量，套餐余量、手机上网流量，微信专属流量查询，客服咨询。</p> <p>广东联通公众号可以绑定手机号，来查询流量、套餐等等功能。 广东联通更与微信深度合作，购买微信沃卡可以获得微信五大特权。</p></div></div> <!----> <div class="content relative_ans" style="display:none;"><h2>相关回答</h2> <ul></ul> <!----></div> <footer class="page-edit"><!----></footer>  <footer class="footer"><ul class="footer-links"><li class="footer-link"><a href="http://www.tencent.com/zh-cn/index.shtml" target="_blank">关于腾讯</a></li> <li class="footer-link"><a href="https://mp.weixin.qq.com/debug/wxadoc/introduction/index.html?t=1484641676" target="_blank">文档中心</a></li> <li class="footer-link"><a href="https://mp.weixin.qq.com/cgi-bin/opshowpage?action=dispelinfo&lang=zh_CN&begin=1&count=9" target="_blank">辟谣中心</a></li> <li class="footer-link"><a href="http://kf.qq.com/faq/120911VrYVrA1509086vyumm.html" target="_blank">客服中心</a></li> <li class="footer-link"><a href="mailto:weixinmp@qq.com" target="_blank">联系邮箱</a></li></ul> <p class="copyright">Copyright © 2012-<span>2021</span> Tencent. All Rights Reserved.</p></footer></div></main></div></div></div> <div id="popoverWrapId" class="pop-links__wrp popover_hide"><ul class="pop-links__list"><li class="pop-links__item"><button class="pop-link">复制</button></li> <li class="pop-links__item"><button class="pop-link">问题反馈</button></li></ul></div> <div class="fixed-btns"><a href="javascript:;" class="fixed-btn fixed-btn__feedback"><div class="fixed-btn__inner"><span class="fixed-btn__icon"></span> <span class="fixed-btn__text">反馈</span></div></a> <a href="javascript:;" class="fixed-btn fixed-btn__top" style="display:none;"><div class="fixed-btn__inner"><span class="fixed-btn__icon"></span></div></a></div></div></div></div>
+    <script src="https://res.wx.qq.com/wxdoc/dist/assets/js/app.5ef0b322.js" defer></script><script src="https://res.wx.qq.com/wxdoc/dist/assets/js/522.f69b787b.js" defer></script>
+  </body>
+</html>
